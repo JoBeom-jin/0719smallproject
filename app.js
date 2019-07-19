@@ -100,6 +100,26 @@ router.get('/boot4', function (req, res) {
     //__dirname : It will resolve to your project folder.
 });
 
+router.get('/textadd', function (req, res) {
+    console.log(req.query);
+    res.send('제목 : ' + req.query.text1 + '  내용 : ' + req.query.text2 + '  날짜 : ' + req.query.text3 + '  작성자 : ' + req.query.text4)
+});
+
+router.get('/login1', function (req, res) {
+    console.log(req.query);
+    res.send('email: ' + req.query.loginemail + '  password : ' + req.query.loginpassword + '  check : ' + req.query.logincheckbox)
+});
+
+router.get('/notice', function (req, res) {
+    res.sendFile(path.join(__dirname + '/sungho/notice.html'));
+    //__dirname : It will resolve to your project folder.
+});
+
+router.get('/login', function (req, res) {
+    res.sendFile(path.join(__dirname + '/sungho/login.html'));
+    //__dirname : It will resolve to your project folder.
+});
+
 app.use('/', router);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
