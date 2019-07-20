@@ -100,6 +100,13 @@ router.get('/boot4', function (req, res) {
     //__dirname : It will resolve to your project folder.
 });
 
+
+
+
+
+
+
+
 router.get('/textadd', function (req, res) {
     console.log(req.query);
     res.send('제목 : ' + req.query.text1 + '  내용 : ' + req.query.text2 + '  날짜 : ' + req.query.text3 + '  작성자 : ' + req.query.text4)
@@ -110,15 +117,44 @@ router.get('/login1', function (req, res) {
     res.send('email: ' + req.query.loginemail + '  password : ' + req.query.loginpassword + '  check : ' + req.query.logincheckbox)
 });
 
-router.get('/notice', function (req, res) {
+router.get('/sh_ipad', function (req, res) {
+    res.sendFile(path.join(__dirname + '/sungho/ipad.html'));
+    //__dirname : It will resolve to your project folder.
+});
+
+router.get('/sh_iphone', function (req, res) {
+    res.sendFile(path.join(__dirname + '/sungho/iphone.html'));
+    //__dirname : It will resolve to your project folder.
+});
+
+router.get('/sh_mac', function (req, res) {
+    res.sendFile(path.join(__dirname + '/sungho/mac.html'));
+    //__dirname : It will resolve to your project folder.
+});
+
+router.get('/sh_main', function (req, res) {
+    res.sendFile(path.join(__dirname + '/sungho/main.html'));
+    //__dirname : It will resolve to your project folder.
+});
+
+router.get('/sh_music', function (req, res) {
+    res.sendFile(path.join(__dirname + '/sungho/music.html'));
+    //__dirname : It will resolve to your project folder.
+});
+
+router.get('/sh_notice', function (req, res) {
     res.sendFile(path.join(__dirname + '/sungho/notice.html'));
     //__dirname : It will resolve to your project folder.
 });
 
-router.get('/login', function (req, res) {
-    res.sendFile(path.join(__dirname + '/sungho/login.html'));
+router.get('/sh_watch', function (req, res) {
+    res.sendFile(path.join(__dirname + '/sungho/watch.html'));
     //__dirname : It will resolve to your project folder.
 });
+
+
+
+
 
 app.use('/', router);
 
