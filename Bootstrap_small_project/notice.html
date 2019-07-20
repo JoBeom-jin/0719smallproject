@@ -16,12 +16,11 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between fixed-top">
 
 
 
         <ul class="navbar-nav ">
-            <a class="navbar-brand " href="main.html">Logo</a>
             <li class="nav-item ">
                 <a class="nav-link" href="mac.html">Mac</a>
             </li>
@@ -59,7 +58,53 @@
 
         <ul class="navbar-nav ">
             <li class="nav-item ">
-                <a class="nav-link" href="login.html">login</a>
+                <div data-toggle="modal" data-target="#myModal5">
+                    <a class="nav-link">login</a></div>
+                <div class="modal fade" id="myModal5">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">로그인</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <form action="/login" method="GET">
+                                <div>
+                                    <div class="form-group col-lg-8  ">
+                                        <label for="email">Email:</label>
+                                        <input type="email" name="login_email" class="form-control" id="email"
+                                            placeholder="Enter emaill">
+                                    </div>
+
+                                    <div class="form-group col-lg-8 ">
+                                        <label for="pwd">Password:</label>
+                                        <input type="password" name="login_password" class="form-control"
+                                            placeholder="Enter password">
+                                    </div>
+
+                                    <div class="form-group form-inline col-lg-8">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input"
+                                                    name="login_checkbox">Remember me
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+                                    <button type="submit" class="btn btn-outline-secondary m-3">Submit</button>
+
+                                </div>
+
+                            </form>
+                            <div class="modal-body">
+                                정말로 로그인을 하시겠습니까?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal">예</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </li>
 
 
@@ -92,7 +137,7 @@
 
     </nav>
 
-<h1 class="container mt-5">게시판</h1>
+    <h1 class="container mt-5 p-5">게시판</h1>
     <div class="container">
         <div class="table-responsive-xl">
             <table class="table">
@@ -113,7 +158,8 @@
                     <td>2019-05-23</td>
                     <td>15</td>
                     <td>최성호</td>
-                    <td><div>
+                    <td>
+                        <div>
                             <button type="button" data-toggle="modal" data-target="#myModal6">
                                 클릭 </button>
                             <div class="modal fade" id="myModal6">
@@ -132,9 +178,10 @@
                                     </div>
                                 </div>
                             </div>
-                        
-                        </div></td>
-                    
+
+                        </div>
+                    </td>
+
                 </tr>
                 <tr>
                     <th>3</th>
@@ -143,7 +190,8 @@
                     <td>2019-05-27</td>
                     <td>92</td>
                     <td>조범진</td>
-                    <td><div>
+                    <td>
+                        <div>
                             <button type="button" data-toggle="modal" data-target="#myModal5">
                                 클릭 </button>
                             <div class="modal fade" id="myModal5">
@@ -162,8 +210,9 @@
                                     </div>
                                 </div>
                             </div>
-                        
-                        </div></td>
+
+                        </div>
+                    </td>
 
                 </tr>
                 <tr>
@@ -173,7 +222,8 @@
                     <td>2019-06-03</td>
                     <td>87</td>
                     <td>이민규</td>
-                    <td><div>
+                    <td>
+                        <div>
                             <button type="button" data-toggle="modal" data-target="#myModal4">
                                 클릭 </button>
                             <div class="modal fade" id="myModal4">
@@ -192,8 +242,9 @@
                                     </div>
                                 </div>
                             </div>
-                        
-                        </div></td>
+
+                        </div>
+                    </td>
 
                 </tr>
                 <tr>
@@ -203,7 +254,8 @@
                     <td>2019-06-10</td>
                     <td>12</td>
                     <td>오준하</td>
-                    <td><div>
+                    <td>
+                        <div>
                             <button type="button" data-toggle="modal" data-target="#myModal3">
                                 클릭 </button>
                             <div class="modal fade" id="myModal3">
@@ -222,8 +274,9 @@
                                     </div>
                                 </div>
                             </div>
-                        
-                        </div></td>
+
+                        </div>
+                    </td>
 
                 </tr>
                 <tr>
@@ -233,7 +286,8 @@
                     <td>2019-07-19</td>
                     <td>24</td>
                     <td>오윤기</td>
-                    <td><div>
+                    <td>
+                        <div>
                             <button type="button" data-toggle="modal" data-target="#myModal2">
                                 클릭 </button>
                             <div class="modal fade" id="myModal2">
@@ -252,8 +306,9 @@
                                     </div>
                                 </div>
                             </div>
-                        
-                        </div></td>
+
+                        </div>
+                    </td>
 
                 </tr>
             </table>
