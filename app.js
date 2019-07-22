@@ -7,6 +7,7 @@ const port = 3000
 
 
 app.use(express.static('beomjin_img'))
+app.use(express.static('sunghoimg'))
 
 
 const path = require('path');
@@ -109,46 +110,47 @@ router.get('/boot4', function (req, res) {
 
 router.get('/textadd', function (req, res) {
     console.log(req.query);
-    res.send('제목 : ' + req.query.text1 + '  내용 : ' + req.query.text2 + '  날짜 : ' + req.query.text3 + '  작성자 : ' + req.query.text4)
+    res.send('제목 : ' + req.query.text1 + '  내용 : ' + req.query.text2 + '  날짜 : ' + req.query.text3 + '  작성자 : ' + req.query.text4  + '  <a href="/sh_notice">게시판_Go</a>')
 });
 
 router.get('/login1', function (req, res) {
     console.log(req.query);
-    res.send('email: ' + req.query.loginemail + '  password : ' + req.query.loginpassword + '  check : ' + req.query.logincheckbox)
+    res.send('email: ' + req.query.login_email + '  password : ' + req.query.login_password + '  check : ' + req.query.login_checkbox  + '  <a href="/sh_main">메인으로_Go</a>')
 });
 
+
 router.get('/sh_ipad', function (req, res) {
-    res.sendFile(path.join(__dirname + '/sungho/ipad.html'));
+    res.sendFile(path.join(__dirname + '/Bootstrap_small_project/ipad.html'));
     //__dirname : It will resolve to your project folder.
 });
 
 router.get('/sh_iphone', function (req, res) {
-    res.sendFile(path.join(__dirname + '/sungho/iphone.html'));
+    res.sendFile(path.join(__dirname + '/Bootstrap_small_project/iphone.html'));
     //__dirname : It will resolve to your project folder.
 });
 
 router.get('/sh_mac', function (req, res) {
-    res.sendFile(path.join(__dirname + '/sungho/mac.html'));
+    res.sendFile(path.join(__dirname + '/Bootstrap_small_project/mac.html'));
     //__dirname : It will resolve to your project folder.
 });
 
 router.get('/sh_main', function (req, res) {
-    res.sendFile(path.join(__dirname + '/sungho/main.html'));
+    res.sendFile(path.join(__dirname + '/Bootstrap_small_project/main.html'));
     //__dirname : It will resolve to your project folder.
 });
 
 router.get('/sh_music', function (req, res) {
-    res.sendFile(path.join(__dirname + '/sungho/music.html'));
+    res.sendFile(path.join(__dirname + '/Bootstrap_small_project/music.html'));
     //__dirname : It will resolve to your project folder.
 });
 
 router.get('/sh_notice', function (req, res) {
-    res.sendFile(path.join(__dirname + '/sungho/notice.html'));
+    res.sendFile(path.join(__dirname + '/Bootstrap_small_project/notice.html'));
     //__dirname : It will resolve to your project folder.
 });
 
 router.get('/sh_watch', function (req, res) {
-    res.sendFile(path.join(__dirname + '/sungho/watch.html'));
+    res.sendFile(path.join(__dirname + '/Bootstrap_small_project/watch.html'));
     //__dirname : It will resolve to your project folder.
 });
 
